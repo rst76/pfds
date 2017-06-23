@@ -1,2 +1,2 @@
 # PFDS
-Purely Functional Data Structure
+Purely Functional Data Structures
