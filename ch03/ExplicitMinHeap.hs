@@ -1,4 +1,4 @@
-module ExplicitMinHeap where
+module ExplicitMinHeap(ExplicitMinHeap) where
 
 import qualified Heap as H
 
@@ -24,7 +24,7 @@ instance H.Heap h => H.Heap (ExplicitMinHeap h) where
   deleteMin E = error "empty heap"
   deleteMin (NE x h)
     | H.isEmpty h' = E
-    | otherwise  = NE y h'
+    | otherwise    = NE y h'
     where
     h' = H.deleteMin h
     y  = H.findMin h'
