@@ -29,7 +29,7 @@ findMin ((_, t) : ts) = min (root t) (findMin ts)
 
 main :: IO ()
 main = do
-  let ts = foldr insert empty [1,2,3,4,5,6,7]
+  let ts = foldr insert empty [1, 2, 3, 4, 5, 6, 7]
   print ts
   -- => [(0,Node 1 []),(1,Node 2 [Node 3 []]),(2,Node 4 [Node 6 [Node 7 []],Node 5 []])]
   print $ findMin ts
