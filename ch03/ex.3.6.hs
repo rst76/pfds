@@ -27,6 +27,28 @@ findMin [] = error "Emtpy!"
 findMin [(_, t)] = root t
 findMin ((_, t) : ts) = min (root t) (findMin ts)
 
+merge :: Ord a => Heap a -> Heap a -> Heap a
+merge ts1 [] = ts1
+merge [] ts2 = ts2
+merge ts1@((r1, t1) : ts1') ts2@((r2, t2) : ts2')
+  | r1 < r2 = (r1, t1) : merge ts1' ts2
+  | r2 < r1 = (r2, t2) : merge ts1 ts2'
+  | otherwise = insTree (r1 + 1, link t1 t2) (merge ts1' ts2')
+
+removeMinTree :: Ord a => Heap a -> (Tree a, Heap a)
+removeMinTree [] = error "Emtpy!"
+removeMinTree [(_, t)] = (t, [])
+removeMinTree ((r, t) : ts)
+  | root t <= root t' = (t, ts)
+  | otherwise         = (t', (r, t) : ts')
+  where
+  (t', ts') = removeMinTree ts
+
+deleteMin :: Ord a => Heap a -> Heap a
+deleteMin ts = merge (zip [0..] (reverse ts1)) ts2
+  where
+  (Node x ts1, ts2) = removeMinTree ts
+
 main :: IO ()
 main = do
   let ts = foldr insert empty [1, 2, 3, 4, 5, 6, 7]
@@ -34,8 +56,12 @@ main = do
   -- => [(0,Node 1 []),(1,Node 2 [Node 3 []]),(2,Node 4 [Node 6 [Node 7 []],Node 5 []])]
   print $ findMin ts
   -- => 1
+  print $ deleteMin ts
+  -- => [(1,Node 2 [Node 3 []]),(2,Node 4 [Node 6 [Node 7 []],Node 5 []])]
   let ts = foldr insert empty "ebdac"
   print ts
   -- => [(0,Node 'e' []),(2,Node 'a' [Node 'b' [Node 'd' []],Node 'c' []])]
   print $ findMin ts
   -- => 'a'
+  print $ deleteMin ts
+  -- => [(2,Node 'b' [Node 'c' [Node 'e' []],Node 'd' []])]
