@@ -21,5 +21,9 @@ fromList s = fromList' (map (\x -> T 1 x E E) s)
   where
   fromList' [t] = t
   fromList' s = fromList' (pair s)
-  pair (a : b : s) = merge a b : go s
+  pair (a : b : s) = merge a b : pair s
   pair s = s
+
+main :: IO ()
+main = print $ fromList [1, 2, 3, 4, 5, 6, 7]
+-- => T 2 1 (T 2 3 (T 2 5 (T 1 6 E E) (T 1 7 E E)) (T 1 4 E E)) (T 1 2 E E)
