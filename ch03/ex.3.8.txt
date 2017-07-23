@@ -1,0 +1,5 @@
+Let the minimum / maximum depth of the red-black tree of size n as dmin / dmax.
+For 2 ^ dmin - 1 <= n,
+dmin <= floor (log (n + 1))
+As dmax <= 2 * dmin
+dmax <= 2 * floor (log (n + 1))

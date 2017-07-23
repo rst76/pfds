@@ -1,0 +1,39 @@
+Ver.1
+
+fun lazy drop (0, s) = s
+       | drop (n, $Nil) = $Nil
+       | drop (n, $Cons (x, s)) = drop (n-1, s)
+
+fun drop x = $case x of
+  | (0, s) => force s
+  | (n, $Nil) => force $Nil
+  | (n, $Cons (x, s)) => force (drop (n - 1, s))
+
+fun drop x = case x of
+  | (0, s) => s
+  | (n, Nil) => Nil
+  | (n, Cons (x, s)) => drop (n - 1, s)
+
+
+Ver.2
+
+fun lazy drop (n, s) = let fun drop' (0, s) = s
+                             | drop' (n, $Nil) = $Nil
+                             | drop' (n, $Cons (x, s)) = drop' (n-1, s)
+                       in drop' (n, s) end
+
+fun drop x = $case x of
+  | (n, s) => force (let fun drop' (0, s) = s
+                           | drop' (n, $Nil) = $Nil
+                           | drop' (n, $Cons (x, s)) = drop' (n-1, s)
+                     in drop' (n, s) end)
+
+fun drop x = case x of
+  | (n, s) => let fun drop' (0, s) = s
+                    | drop' (n, Nil) = Nil
+                    | drop' (n, Cons (x, s)) = drop' (n-1, s)
+              in drop' (n, s) end
+
+fun drop (0, s) = s
+  | drop (n, Nil) = Nil
+  | drop (n, Cons (x, s)) = drop (n-1, s)
