@@ -6,7 +6,7 @@ insertionSort = foldl ins []
     | x < y = x : y : ys
     | otherwise = y : ins ys x
 
--- To detect some number being the member of the first k numbers,
+-- To detect each n numbers being the member of the first k numbers,
 -- we have to compare at most to the first k members of the sorted list.
 -- (It's not necessary to compare to the rest members of the sorted list.)
 -- So, sort xs takes O(n * k) time.
