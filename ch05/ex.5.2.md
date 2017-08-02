@@ -1,0 +1,1 @@
+Let $k$ be the number of calls to `link`, a call to `insert` takes $k + 1$ steps. If we regard the number of trees in the heap as credit, it increases 1 by `insert`, and decreases $k$ by `link`. So amortized cost $a_i = (k + 1) + 1 - k = 2$

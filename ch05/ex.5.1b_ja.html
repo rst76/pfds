@@ -1,0 +1,16 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+</head>
+<body>
+<p>平衡化（リストの反転）を伴わない <code>cons</code> と <code>snoc</code> は処理に 1 回のステップを要し、<span class="math inline">\(\Phi\)</span> を 1 増大または減少させる。 平衡化を伴わない <code>tail</code> と <code>init</code> もやはり処理に 1 ステップを要し、<span class="math inline">\(\Phi\)</span> を 1 増大または減少させる。</p>
+<p>平衡化を伴う <code>cons</code> と <code>snoc</code> は初回のみ呼ばれ、2 ステップを要し、<span class="math inline">\(\Phi\)</span> を 1 増やす。償却計算量 <span class="math inline">\(a_i=2+1=3\)</span> である。（今回の実装では 2 回目に呼ばれ、3 ステップで <span class="math inline">\(\Phi\)</span> を 1 減らすが、いずれにせよ定数回の操作であり結論は変わらない。）</p>
+<p>平衡化を伴う <code>tail</code> について、末尾側リストのサイズを <span class="math inline">\(m\)</span> とおく。二つのリストを再構築するのに <span class="math inline">\(m\)</span> ステップを要し、ポテンシャル関数は <span class="math inline">\(\Phi_{i-1}=m-1\)</span> から <span class="math inline">\(\Phi_i=0\)</span> に減少するので、償却計算量は <span class="math inline">\(a_i=m+1-(m-1)=2\)</span> となる。 平衡化ありの <code>init</code> についても同様であり、各操作は <span class="math inline">\(O(1)\)</span> 償却時間しかかからない。</p>
+</body>
+</html>
