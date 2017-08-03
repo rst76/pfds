@@ -50,6 +50,7 @@ Purely Functional Data Structures
 - Exercise 5.1
 [(a)](https://github.com/rst76/pfds/blob/master/ch05/ex.5.1a.hs)
 [(b)](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch05/ex.5.1b.html)
+[(b ja)](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch05/ex.5.1b_ja.html)
 ### 5.3 Binomial Heaps
 - [Exercise 5.2](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch05/ex.5.2.html)
 [(ja)](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch05/ex.5.2_ja.html)
@@ -58,7 +59,6 @@ Purely Functional Data Structures
 ### 5.4 Splay Heaps
 - [Exercise 5.4](https://github.com/rst76/pfds/blob/master/ch05/ex.5.4.hs)
 - [Exercise 5.5](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch05/ex.5.5.html)
-[(image)](https://raw.githubusercontent.com/rst76/pfds/master/ch05/ex.5.5.png)
 ### 5.5 Paring Heaps
 ### 5.6 The Bad News
 ### 5.7 Chapter Notes

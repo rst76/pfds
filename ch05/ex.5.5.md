@@ -1,3 +1,4 @@
+![](ex.5.5.png)
 $$
 A(s) = T(s) + \Phi(t') + \Phi(s') + \Phi(s)
 $$
