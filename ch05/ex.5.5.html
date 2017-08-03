@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+</head>
+<body>
+<p><span class="math display">\[
+A(s) = T(s) + \Phi(t&#39;) + \Phi(s&#39;) + \Phi(s)
+\]</span> For <span class="math inline">\(T(s) = 1 + T(u)\)</span>, <span class="math display">\[
+= 1 + T(u) + \Phi(t&#39;) + \Phi(s&#39;) + \Phi(s)
+\]</span> <span class="math display">\[
+= 1 + A(u) - \Phi(b) - \Phi(c) - \Phi(u) + \Phi(t&#39;) + \Phi(s&#39;) + \Phi(s)
+\]</span> <span class="math display">\[
+= 1 + A(u) - \Phi(b) - \Phi(c) - \Phi(u) + (\phi(t&#39;) + \Phi(a) + \Phi(b)) + (\phi(s&#39;) + \Phi(c) + \Phi(d)) + (\phi(s) + \phi(t) + \Phi(u) + \Phi(a) + \Phi(d))
+\]</span> <span class="math display">\[
+= 1 + A(u) + \phi(s&#39;) + \phi(t&#39;) - \phi(s) - \phi(t)
+\]</span> <span class="math display">\[
+\leq 2 + 2\phi(u) + \phi(s&#39;) + \phi(t&#39;) - \phi(s) - \phi(t)
+\]</span> For <span class="math inline">\(\phi(u) &lt; \phi(s), \phi(u) &lt; \phi(t)\)</span>, <span class="math display">\[
+&lt; 2 + \phi(s&#39;) + \phi(t&#39;)
+\]</span> For <span class="math inline">\(\#s&#39; + \#t&#39; = \#s\)</span> and Lemma 5, <span class="math display">\[
+&lt; 1 + 2\phi(s)
+\]</span></p>
+</body>
+</html>
