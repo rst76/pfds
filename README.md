@@ -1,5 +1,5 @@
-# PFDS
-Purely Functional Data Structures
+# Purely Functional Data Structures
+Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 
 ## 2 Persistance
 ### 2.1 Lists
@@ -12,7 +12,6 @@ Purely Functional Data Structures
 [(a)](https://github.com/rst76/pfds/blob/master/ch02/ex.2.5a.hs)
 [(b)](https://github.com/rst76/pfds/blob/master/ch02/ex.2.5b.hs)
 - [Exercise 2.6](https://github.com/rst76/pfds/blob/master/ch02/ex.2.6.hs)
-### 2.3 Chapter Notes
 
 ## 3 Some Faimiliar Data Structures in a Functional Setting
 ### 3.1 Leftist Heaps
@@ -34,7 +33,6 @@ Purely Functional Data Structures
 - Exercise 3.10
 [(a)](https://github.com/rst76/pfds/blob/master/ch03/ex.3.10.hs)
 (b)
-### 3.4 Chapter Notes
 
 ## 4 Lazy Evaluation
 ### 4.1 $-notation
@@ -42,7 +40,6 @@ Purely Functional Data Structures
 - [Exercise 4.1](https://github.com/rst76/pfds/blob/master/ch04/ex.4.1.txt)
 - [Exercise 4.2](https://github.com/rst76/pfds/blob/master/ch04/ex.4.2.hs)
 [(process)](https://github.com/rst76/pfds/blob/master/ch04/ex.4.2.txt)
-### 4.3 Chapter Notes
 
 ## 5 Fundamentals of Amortization
 ### 5.1 Techniques of Amortized Analysis
@@ -59,9 +56,8 @@ Purely Functional Data Structures
 ### 5.4 Splay Heaps
 - [Exercise 5.4](https://github.com/rst76/pfds/blob/master/ch05/ex.5.4.hs)
 - [Exercise 5.5](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch05/ex.5.5.html)
-### 5.5 Paring Heaps
+### 5.5 Pairing Heaps
 ### 5.6 The Bad News
-### 5.7 Chapter Notes
 
 
 
