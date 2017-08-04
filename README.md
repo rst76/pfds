@@ -57,6 +57,7 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 - [Exercise 5.4](https://github.com/rst76/pfds/blob/master/ch05/ex.5.4.hs)
 - [Exercise 5.5](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch05/ex.5.5.html)
 - [Exercise 5.6](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch05/ex.5.6.html)
+- [Exercise 5.7](https://github.com/rst76/pfds/blob/master/ch05/ex.5.7.hs)
 ### 5.5 Pairing Heaps
 ### 5.6 The Bad News
 
