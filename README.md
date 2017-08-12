@@ -4,6 +4,7 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 ## 2 Persistance
 ### 2.1 Lists
 - [Exercise 2.1](https://github.com/rst76/pfds/blob/master/ch02/ex.2.1.hs)
+[(image)](https://github.com/rst76/pfds/raw/master/ch02/ex.2.1.png)
 ### 2.2 Binary Search Tree
 - [Exercise 2.2](https://github.com/rst76/pfds/blob/master/ch02/ex.2.2.hs)
 - [Exercise 2.3](https://github.com/rst76/pfds/blob/master/ch02/ex.2.3.hs)
