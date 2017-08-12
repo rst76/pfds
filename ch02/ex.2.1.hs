@@ -1,3 +1,3 @@
 suffixes :: [a] -> [[a]]
 suffixes [] = [[]]
-suffixes s = s : suffixes (tail s)
+suffixes xs@(_ : xs') = xs : suffixes xs'
