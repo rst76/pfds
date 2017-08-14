@@ -22,7 +22,7 @@ For $\phi(a) < \phi(t), \phi(s') < \phi(s)$,
 $$
 < 2 + \phi(a) + \phi(t')
 $$
-For $\#a + \#t' = \#s$ and Lemma 5,
+For $\#a + \#t' = \#s$ and Lemma 5.1,
 $$
 < 1 + 2\phi(s)
 $$

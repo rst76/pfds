@@ -63,6 +63,7 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 - Exercise 5.8
 [(a)](https://github.com/rst76/pfds/blob/master/ch05/ex.5.8a.hs)
 [(b)](https://github.com/rst76/pfds/blob/master/ch05/ex.5.8b.hs)
+[(c)](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch05/ex.5.8c.html)
 ### 5.6 The Bad News
 
 

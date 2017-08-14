@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+</head>
+<body>
+<p>Conider merge operation divided to the pairing step and the combining step.</p>
+<div class="figure">
+<img src="ex.5.8c1.png" />
+
+</div>
+<h2 id="pairing">Pairing</h2>
+<div class="figure">
+<img src="ex.5.8c2.png" />
+
+</div>
+<p>On pairing, the amortized cost of one merge operation is <span class="math display">\[
+A(p) = 1 + \Phi(p&#39;) - \Phi(p)
+\]</span> <span class="math display">\[
+= 1 + \phi(p&#39;) + \phi(q&#39;) - \phi(p) - \phi(q)
+\]</span> <span class="math display">\[
+= 1 + \phi(q&#39;) - \phi(q)
+\]</span> <span class="math display">\[
+= 1 + \log(\#t_1 + \#t_2) - \log(\#t_2 + \#u_3)
+\]</span> <span class="math display">\[
+\le 1 + \log(\#t_1 + \#t_2) - \log(\#u_3)
+\]</span> As <span class="math inline">\(2 + \log(\#t_1 + \#t_2) + \log(\#u_3) \le 2\log(\#t_1 + \#t_2 + \#u_3)\)</span> (See appendix), <span class="math display">\[
+\le 2\log(\#t_1 + \#t_2 + \#u_3) - 2\log(\#u_3) - 1
+\]</span> <span class="math display">\[
+\le 2\log(\#u_1) - 2\log(\#u_3) - 1
+\]</span> If we let the number of the pairs as <span class="math inline">\(p\)</span>, the total amortized cost on pairing is <span class="math display">\[
+\sum_{i=1}^{p} (2\log(\#u_{2i-1}) - 2\log(\#u_{2i+1}) - 1) = 2\log(\#u_1) - 2\log(\#u_{2p+1}) - p
+\]</span> <span class="math display">\[
+\le 2\log(\#u_1) -p = 2\log(n) - p
+\]</span></p>
+<h2 id="combining">Combining</h2>
+<div class="figure">
+<img src="ex.5.8c3.png" />
+
+</div>
+<p>On combining, the amortized cost of merging is as follows. <span class="math display">\[
+A(p) = 1 + \Phi(p_k&#39;) - \Phi(p_k)
+\]</span> <span class="math display">\[
+= 1 + \phi(p_k&#39;) + \phi(p_{k+1}&#39;) - \phi(p_k) - \phi(p_{k+1})
+\]</span> <span class="math display">\[
+= 1 + \log(\#t_k + \#t_{k+1} + 1) + \log(\#t_k + \#t_{k+1}) - \log(\#t_k + \#t_{k+1} + 1) - \log(\#t_{k+1} + 1)
+\]</span> <span class="math display">\[
+&lt; 1 + \log(\#t_k + \#t_{k+1} + 1) - \log(\#t_{k+1} + 1)
+\]</span> <span class="math display">\[
+= 1 + \log(\#t_k&#39; + 1) - \log(\#t_{k+1} + 1)
+\]</span> So, if we let th number of combining as <span class="math inline">\(c\)</span>, the total amortized cost is <span class="math display">\[
+\sum_{i=1}^{c} (1 + \log(\#t_i &#39;+ 1) - \log(\#t_{i+1})) = c + \log(\#t_1&#39; + 1) - \log(\#t_{c+1})
+\]</span> <span class="math display">\[
+\le c + \log(\#t_1 + 1) = c + \log(n)
+\]</span></p>
+<h2 id="deletemin-and-merge">deleteMin and Merge</h2>
+<p>For <span class="math inline">\(c = p-1\)</span> or <span class="math inline">\(c = p\)</span>, <span class="math inline">\(c \le p\)</span>. So the total amortized cost of <code>merge</code> is <span class="math display">\[
+A_{merge} = (2\log(n) - p) + (c + \log(n)) \le 3\log(n)
+\]</span></p>
+<p>About <code>deleteMin</code>, cosidering the decrease of potential for removing the minimum node(<span class="math inline">\(\log(n+1)\)</span>), the amortized cost is as follows. <span class="math display">\[
+A_{deleteMin} &lt; 2\log(n)
+\]</span> After all, it consists both <code>merge</code> and <code>deleteMin</code> run in <span class="math inline">\(O(log(n))\)</span>.</p>
+<h2 id="appendix">Appendix</h2>
+<p>For positive number <span class="math inline">\(x, y\)</span>, <span class="math display">\[
+0 \le (x-y)^2
+\]</span> <span class="math display">\[
+4xy \le (x+y)^2
+\]</span> <span class="math display">\[
+2 + \log(x) + \log(y) \le 2\log(x+y)
+\]</span></p>
+</body>
+</html>
