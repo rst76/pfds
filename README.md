@@ -64,7 +64,12 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 [(a)](https://github.com/rst76/pfds/blob/master/ch05/ex.5.8a.hs)
 [(b)](https://github.com/rst76/pfds/blob/master/ch05/ex.5.8b.hs)
 [(c)](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch05/ex.5.8c.html)
+- [Exercise 5.9](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch05/ex.5.9.html)
 ### 5.6 The Bad News
-
-
-
+## 6 Amortization and Persistence via Lazy Evaluation
+### 6.1 Execution Traces and Logical Time
+- [Exercise 6.1](https://github.com/rst76/pfds/raw/master/ch06/ex.6.1.png)
+### 6.2 Reconciling Amortization and Persistence
+### 6.3 The Banker's Method
+### 6.4 The Physicist's Method
+### 6.5 Lazy Pairing Heaps
