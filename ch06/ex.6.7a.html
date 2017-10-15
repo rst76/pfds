@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+</head>
+<body>
+<div class="figure">
+<img src="ex.6.7a.png" />
+
+</div>
+<p>サイズ<span class="math inline">\(2^k\)</span>のセグメントに属する要素は<span class="math inline">\(d = k\)</span>の負債を負うとする。 このセグメントがマージされるのは<span class="math inline">\(2^k\)</span>回<code>add</code>が呼ばれた後なので、1回の<code>add</code>で<span class="math inline">\(k\)</span>の負債を返却すれば、このセグメントの負債は完済される。 他のセグメントについても同様で、サイズ<span class="math inline">\(2^m-1 \le n &lt; 2^m\)</span>のコレクションについて、1回の<code>add</code>で返済すべき負債の合計は最大で</p>
+<p><span class="math display">\[
+\sum_{k=0}^{m-1}2^k k = 2^m(m-2)+1
+\]</span></p>
+<p>よって<code>add</code>は<span class="math inline">\(O(n\log n)\)</span>の償却計算量となる。</p>
+<p><code>sort</code>については、物理学者法と同様。（それ以外の方法が分からない・・・）</p>
+</body>
+</html>
