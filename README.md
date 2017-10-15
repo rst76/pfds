@@ -79,6 +79,6 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 - Exercise 6.5
 - Exercise 6.6
 - Exercise 6.7
-[(a)](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch06/ex.6.7q.html)
+[(a)](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch06/ex.6.7a.html)
 [(b)](https://github.com/rst76/pfds/blob/master/ch06/ex.6.7b.hs)
 ### 6.5 Lazy Pairing Heaps
