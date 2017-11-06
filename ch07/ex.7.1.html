@@ -14,6 +14,7 @@
 <img src="ex.7.1.png" />
 
 </div>
-<p>snoc、head、tail いずれの関数も、引数のパターンマッチあるいはcheck関数の呼び出し時に、依存している停止計算を進行させる（以前に生成されたrotate関数を呼び出す）可能性がある。 この呼び出しは再帰的に複数回実行されうるが、その際に <span class="math inline">\(|ys| = |xs| + 1\)</span> の条件を満たすことから、1回の呼び出しごとに引数のストリームのサイズは1/2未満となる。 したがって、rotate関数の呼び出しは <span class="math inline">\(O(\log n)\)</span> となる。 その他の操作はすべて <span class="math inline">\(O(1)\)</span> なので、各関数の最悪ケースの実行時間は <span class="math inline">\(O(\log n)\)</span> である。</p>
+<p><code>snoc</code>、<code>head</code>、<code>tail</code> いずれの関数も、引数のパターンマッチあるいは <code>check</code> 関数の呼び出し時に、依存している停止計算を進行させる（以前に生成された <code>rotate</code> 関数を呼び出す）可能性がある。 この呼び出しは再帰的に複数回実行されうるが、簡単のため <code>rotate</code> 関数の呼び出しが遅延されるものとすると、 <span class="math inline">\(|ys| = |xs| + 1\)</span> の条件を満たすことから、1回の呼び出しごとに引数のストリームのサイズは1/2未満となる。 したがって、<code>rotate</code> 関数の呼び出しは <span class="math inline">\(O(\log n)\)</span> となる。 その他の操作はすべて <span class="math inline">\(O(1)\)</span> なので、各関数の最悪ケースの実行時間は <span class="math inline">\(O(\log n)\)</span> である。</p>
+<p>なお <code>snoc</code> について、実際には最低1回（＋依存している停止計算分）の <code>rotate</code> 関数呼び出しが発生するが、<code>rotate</code> 関数呼び出しが遅延されると仮定すると、<span class="math inline">\(O(1)\)</span> になると思われる。</p>
 </body>
 </html>
