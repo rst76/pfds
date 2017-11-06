@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="exercise-6.6">Exercise 6.6</h1>
+<h2 id="a">(a)</h2>
+<p><code>check</code> 関数内で遅延計算を生成しない場合、<code>checkw</code> 関数内で必要になった時点で遅延計算を生成かつ進行させる必要がある。 この場合、非共有コストが大きく、ポテンシャルの変化量が非共有コストを超えてしまう（銀行家法で言うと生成した負債を返済する機会がない）ため、償却コストの上限を壊してしまう。</p>
+<ul>
+<li>上述の理由が正しいなら、必要な実コストは変わらないので、ポテンシャル関数をうまく定義すれば償却コストの上限を維持できるのではないか？（実用上は問題ないのではないか？）</li>
+<li><code>checkw</code> 関数で <code>f</code> を <code>force</code> するコストは非共有コストとして計上済みだが、返済済みであることは保障されている？</li>
+<li><code>w &lt;- f'</code> と、<code>f &lt;- $(f' @ List.rev r)</code> とで <code>f'</code> を評価するコストはそれぞれ必要という認識でよいか？</li>
+</ul>
+<h2 id="b">(b)</h2>
+<p><code>tail</code> で遅延計算を生成しない場合、<code>check</code> または <code>checkw</code> 内で要素を取り除く遅延計算を生成し、即座に進行させる必要がある。 (a)と同様、生成した負債を返済する機会がないため、償却コストの上限を壊してしまう。</p>
+<ul>
+<li>(a)と同様、実用上は問題ないのではないか？</li>
+</ul>
+</body>
+</html>
