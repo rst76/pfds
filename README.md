@@ -106,4 +106,19 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 
 ### 7.3 Binomial Heaps
 
+- [Exercise 7.3]
+- [Exercise 7.4](https://github.com/rst76/pfds/blob/master/ch07/ex.7.4.fs)
+
 ### 7.4 Bottom-Up Mergesort with Sharing
+
+## 8 Lazy Rebuilding
+
+### 8.1 Batched Rebuilding
+
+- [Exercise 8.1](https://github.com/rst76/pfds/blob/master/ch08/ex.8.1.hs)
+
+### 8.2 Global Rebuilding
+
+### 8.3 Lazy Rebuilding
+
+### 8.4 Double-Ended Queues
