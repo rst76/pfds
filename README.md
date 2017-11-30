@@ -106,7 +106,7 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 
 ### 7.3 Binomial Heaps
 
-- [Exercise 7.3]
+- [Exercise 7.3](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch07/ex.7.3.html)
 - [Exercise 7.4](https://github.com/rst76/pfds/blob/master/ch07/ex.7.4.fs)
 
 ### 7.4 Bottom-Up Mergesort with Sharing
