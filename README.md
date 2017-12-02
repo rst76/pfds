@@ -119,6 +119,8 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 
 ### 8.2 Global Rebuilding
 
+- [Exercise 8.2](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch08/ex.8.2.html) [(src)](https://github.com/rst76/pfds/blob/master/ch08/ex.8.2.hs)
+
 ### 8.3 Lazy Rebuilding
 
 ### 8.4 Double-Ended Queues

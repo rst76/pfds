@@ -1,0 +1,17 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+</head>
+<body>
+<h1 id="excercise-8.2">Excercise 8.2</h1>
+<p><code>f</code> の長さが <span class="math inline">\(m\)</span> 、<code>r</code> の長さが <span class="math inline">\(m+1\)</span> のときに回転が発生し、 <code>f</code> の長さが <span class="math inline">\(2m+1\)</span> 、<code>r</code> の長さが <span class="math inline">\(0\)</span> になったとする。</p>
+<p>次に回転が発生するのは <code>snoc</code> が <span class="math inline">\(2m+2\)</span> 回呼び出されたときなので、 つねに <span class="math inline">\(1\)</span> 回ずつ <code>exec</code> を呼び出せば、次の回転呼び出しまでに回転操作は完了する。</p>
+<p>また <code>f</code> が空になるのは <span class="math inline">\(m\)</span> 回の <code>tail</code> が呼ばれたときで、 <code>tail</code> によって <code>exec</code> と <code>invalidate</code> が <span class="math inline">\(1\)</span> 回ずつ呼ばれるので、最初の回転で <span class="math inline">\(2\)</span> 回 <code>exec</code> を呼び出せば <code>exec</code> と <code>invalidate</code> が合わせて <span class="math inline">\(2m+1\)</span> 回呼び出され、 <code>f</code> が空になるまでに回転操作が完了する。</p>
+</body>
+</html>
