@@ -14,15 +14,15 @@ let isEmpty (q : Queue<'a>) : bool =
 let rec rotate (q : Queue<'a>) : Stream<'a> =
   match q with
     | (Lazy Nil, y :: _, a) -> lazy (Cons (y, a))
-    | (Lazy (Cons(x, xs)), y :: ys, a) ->
+    | (Lazy (Cons (x, xs)), y :: ys, a) ->
       lazy (Cons (x, rotate (xs, ys, lazy (Cons (y, a)))))
 
 let exec (q : Queue<'a>) : Queue<'a> =
   match q with
     | (f, r, Lazy (Cons (_, s))) -> (f, r, s)
-    | (f, r, Lazy Nil) -> let f' = rotate q in (f', [], f')
+    | (_, _, Lazy Nil) -> let f' = rotate q in (f', [], f')
 
-let snoc ((f, r, s) : Queue<'a>, x : 'a) = exec (f, x :: r, s)
+let snoc ((f, r, s) : Queue<'a>, x : 'a) : Queue<'a> = exec (f, x :: r, s)
 
 let head (q : Queue<'a>) : 'a =
   match q with
@@ -34,13 +34,13 @@ let tail (q : Queue<'a>) : Queue<'a> =
     | (Lazy Nil, _, _) -> failwith "empty queue"
     | (Lazy (Cons (_, f)), r, s) -> exec (f, r, s)
 
-let one : Queue<int> = snoc (empty, 1)
+let one = snoc (empty, 1)
 // exec ({}, [1], {})
 // (rotate ({}, [1], {}), [], rotate ({}, [1], {}))
 // ({1}, [], {1})
 printfn "%A" one
 // => (値は作成されていません。, [], 値は作成されていません。)
-let onetwo : Queue<int> = snoc (one, 2)
+let onetwo = snoc (one, 2)
 // exec ({1}, [2], {1})
 // (1 : {}, [2], {})
 printfn "%A" onetwo
