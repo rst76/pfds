@@ -1,6 +1,6 @@
 module PhysicistsQueue
 
-type Queue<'a> = list<'a> * int * Lazy<list<'a>> * int * list<'a>
+type Queue<'a> = 'a list * int * Lazy<'a list> * int * 'a list
 
 let empty<'a> : Queue<'a> = ([], 0, lazy [], 0, [])
 
@@ -15,7 +15,8 @@ let check ((w, lenf, f, lenr, r) as q : Queue<'a>) : Queue<'a> =
   if lenr <= lenf then checkw q
   else let f' = f.Force() in checkw (f', lenf + lenr, lazy (f' @ List.rev r), 0, [])
 
-let snoc ((w, lenf, f, lenr, r) : Queue<'a>, x : 'a) = check (w, lenf, f, lenr + 1, x :: r)
+let snoc ((w, lenf, f, lenr, r) : Queue<'a>, x : 'a) =
+  check (w, lenf, f, lenr + 1, x :: r)
 
 let head (q : Queue<'a>) : 'a =
   match q with

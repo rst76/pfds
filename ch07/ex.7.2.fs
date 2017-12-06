@@ -2,7 +2,7 @@ module RealTimeQueue
 
 type StreamCell<'a> = Nil | Cons of 'a * Stream<'a>
 and Stream<'a> = Lazy<StreamCell<'a>>
-type Queue<'a> = Stream<'a> * List<'a> * Stream<'a>
+type Queue<'a> = Stream<'a> * 'a list * Stream<'a>
 
 let empty<'a> : Queue<'a> = (lazy Nil, [], lazy Nil)
 
