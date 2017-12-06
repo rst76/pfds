@@ -7,30 +7,31 @@ type Queue<'a> = Stream<'a> * 'a list * Stream<'a>
 let empty<'a> : Queue<'a> = (lazy Nil, [], lazy Nil)
 
 let isEmpty (q : Queue<'a>) : bool =
-  match q with
+    match q with
     | (Lazy Nil, _, _) -> true
     | _ -> false
 
 let rec rotate (q : Queue<'a>) : Stream<'a> =
-  match q with
+    match q with
     | (Lazy Nil, y :: _, a) -> lazy (Cons (y, a))
     | (Lazy (Cons (x, xs)), y :: ys, a) ->
-      lazy (Cons (x, rotate (xs, ys, lazy (Cons (y, a)))))
+        lazy (Cons (x, rotate (xs, ys, lazy (Cons (y, a)))))
 
 let exec (q : Queue<'a>) : Queue<'a> =
-  match q with
+    match q with
     | (f, r, Lazy (Cons (_, s))) -> (f, r, s)
     | (_, _, Lazy Nil) -> let f' = rotate q in (f', [], f')
 
-let snoc ((f, r, s) : Queue<'a>, x : 'a) : Queue<'a> = exec (f, x :: r, s)
+let snoc ((f, r, s) : Queue<'a>, x : 'a) : Queue<'a> =
+    exec (f, x :: r, s)
 
 let head (q : Queue<'a>) : 'a =
-  match q with
+    match q with
     | (Lazy Nil, _, _) -> failwith "empty queue"
     | (Lazy (Cons (x, _)), _, _) -> x
 
 let tail (q : Queue<'a>) : Queue<'a> =
-  match q with
+    match q with
     | (Lazy Nil, _, _) -> failwith "empty queue"
     | (Lazy (Cons (_, f)), r, s) -> exec (f, r, s)
 

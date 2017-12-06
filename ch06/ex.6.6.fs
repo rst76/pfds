@@ -7,24 +7,24 @@ let empty<'a> : Queue<'a> = ([], 0, lazy [], 0, [])
 let isEmpty ((_, lenf, _, _, _) : Queue<'a>) : bool = lenf = 0
 
 let checkw (q : Queue<'a>) : Queue<'a> =
-  match q with
+    match q with
     | ([], lenf, f, lenr, r) -> (f.Force(), lenf, f, lenr, r)
     | _ -> q
 
 let check ((w, lenf, f, lenr, r) as q : Queue<'a>) : Queue<'a> =
-  if lenr <= lenf then checkw q
-  else let f' = f.Force() in checkw (f', lenf + lenr, lazy (f' @ List.rev r), 0, [])
+    if lenr <= lenf then checkw q
+    else let f' = f.Force() in checkw (f', lenf + lenr, lazy (f' @ List.rev r), 0, [])
 
 let snoc ((w, lenf, f, lenr, r) : Queue<'a>, x : 'a) =
-  check (w, lenf, f, lenr + 1, x :: r)
+    check (w, lenf, f, lenr + 1, x :: r)
 
 let head (q : Queue<'a>) : 'a =
-  match q with
+    match q with
     | ([], _, _, _, _) -> failwith "empty queue"
     | (x :: _, _, _, _, _) -> x
 
 let tail (q : Queue<'a>) : Queue<'a> =
-  match q with
+    match q with
     | ([], _, _, _, _) -> failwith "empty queue"
     | (_ :: w, lenf, f, lenr, r) -> check (w, lenf - 1, lazy (List.tail (f.Force())), lenr, r)
 
