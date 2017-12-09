@@ -57,7 +57,7 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 ### 5.3 Binomial Heaps
 
 - [Exercise 5.2](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch05/ex.5.2.html) [(ja)](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch05/ex.5.2_ja.html)
-- [Exercise 5.3](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch05/ex.5.3.html) [(ja)](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch05/ex.5.3_ja.html)
+- Exercise 5.3
 
 ### 5.4 Splay Heaps
 
@@ -69,9 +69,10 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 ### 5.5 Pairing Heaps
 
 - Exercise 5.8 [(a)](https://github.com/rst76/pfds/blob/master/ch05/ex.5.8a.hs) [(b)](https://github.com/rst76/pfds/blob/master/ch05/ex.5.8b.hs) [(c)](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch05/ex.5.8c.html)
-- [Exercise 5.9](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch05/ex.5.9.html)
 
 ### 5.6 The Bad News
+
+- Exercise 5.9
 
 ## 6 Amortization and Persistence via Lazy Evaluation
 
@@ -90,8 +91,8 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 - Exercise 6.3
 - Exercise 6.4
 - Exercise 6.5
-- [Exercise 6.6](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch06/ex.6.6.html) [(src)](https://github.com/rst76/pfds/blob/master/ch06/ex.6.6.fs)
-- Exercise 6.7 [(a)](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch06/ex.6.7a.html) [(b)](https://github.com/rst76/pfds/blob/master/ch06/ex.6.7b.hs)
+- Exercise 6.6 [(src)](https://github.com/rst76/pfds/blob/master/ch06/ex.6.6.fs)
+- Exercise 6.7 (a) [(b)](https://github.com/rst76/pfds/blob/master/ch06/ex.6.7b.hs)
 
 ### 6.5 Lazy Pairing Heaps
 
