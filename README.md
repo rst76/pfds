@@ -23,7 +23,7 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 - [Exercise 3.1](https://github.com/rst76/pfds/blob/master/ch03/ex.3.1.txt)
 - [Exercise 3.2](https://github.com/rst76/pfds/blob/master/ch03/ex.3.2.hs)
 - [Exercise 3.3](https://github.com/rst76/pfds/blob/master/ch03/ex.3.3.hs)
-- Exercise 3.4 (a) [(b)](https://github.com/rst76/pfds/blob/master/ch03/ex.3.4b.hs) [(c)](https://github.com/rst76/pfds/blob/master/ch03/ex.3.4c.hs) (d)
+- Exercise 3.4 [(a)](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch03/ex.3.4a.html) [(b)](https://github.com/rst76/pfds/blob/master/ch03/ex.3.4b.hs) [(c)](https://github.com/rst76/pfds/blob/master/ch03/ex.3.4c.hs) [(d)](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch03/ex.3.4d.html)
 
 ### 3.2 Binomial Heaps
 
