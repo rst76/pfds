@@ -6,20 +6,32 @@
   <meta name="generator" content="pandoc" />
   <title></title>
   <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
 </head>
 <body>
 <h1 id="exercise-6.6">Exercise 6.6</h1>
 <h2 id="a">(a)</h2>
-<p><code>check</code> 関数内で遅延計算を生成しない場合、<code>checkw</code> 関数内で必要になった時点で遅延計算を生成かつ進行させる必要がある。 この場合、非共有コストが大きく、ポテンシャルの変化量が非共有コストを超えてしまう（銀行家法で言うと生成した負債を返済する機会がない）ため、償却コストの上限を壊してしまう。</p>
-<ul>
-<li>上述の理由が正しいなら、必要な実コストは変わらないので、ポテンシャル関数をうまく定義すれば償却コストの上限を維持できるのではないか？（実用上は問題ないのではないか？）</li>
-<li><code>checkw</code> 関数で <code>f</code> を <code>force</code> するコストは非共有コストとして計上済みだが、返済済みであることは保障されている？</li>
-<li><code>w &lt;- f'</code> と、<code>f &lt;- $(f' @ List.rev r)</code> とで <code>f'</code> を評価するコストはそれぞれ必要という認識でよいか？</li>
-</ul>
+<p>先頭側リスト <code>f</code> に <span class="math inline">\(n\)</span>、末尾側リスト <code>r</code> に <span class="math inline">\(n\)</span>、先頭側リストの接頭辞 <code>w</code> に <span class="math inline">\(1\)</span> 個の要素を持ったキュー <code>q0</code> に以下の操作を行うことを考える。</p>
+<ol style="list-style-type: decimal">
+<li><code>q1 = snoc q0 1</code></li>
+<li><code>q2 = snoc q0 2</code></li>
+<li><code>q3 = snoc q0 3</code></li>
+<li><code>q1' = tail q1</code></li>
+<li><code>q2' = tail q2</code></li>
+<li><code>q3' = tail q3</code></li>
+</ol>
+<p><code>w</code> が空になるまで遅延計算を進行させない場合、<code>q1</code>、<code>q2</code>、<code>q3</code> を求める際にそれぞれで生成した <span class="math inline">\(2n + 1\)</span> ステップの遅延計算（反転）を、<code>q1'</code>、<code>q2'</code>、<code>q3'</code> を求める際に進行させる必要がある。 生成した負債を返済する機会がないため、償却コストの上限を壊してしまう。</p>
 <h2 id="b">(b)</h2>
-<p><code>tail</code> で遅延計算を生成しない場合、<code>check</code> または <code>checkw</code> 内で要素を取り除く遅延計算を生成し、即座に進行させる必要がある。 (a)と同様、生成した負債を返済する機会がないため、償却コストの上限を壊してしまう。</p>
-<ul>
-<li>(a)と同様、実用上は問題ないのではないか？</li>
-</ul>
+<p>先頭側リスト <code>f</code> に <span class="math inline">\(n\)</span>、末尾側リスト <code>r</code> に <span class="math inline">\(0\)</span> の要素を持ったキュー <code>q0</code> に以下の操作を行うことを考える。</p>
+<ol style="list-style-type: decimal">
+<li><code>q0' = iterate tail q0 !! (n - 1)</code>（<code>q0</code> に対する <span class="math inline">\(n-1\)</span> 回の <code>tail</code>）</li>
+<li><code>q1 = snoc q0' 1</code></li>
+<li><code>q2 = snoc q0' 2</code></li>
+<li><code>q3 = snoc q0' 3</code></li>
+<li><code>q1' = tail q1</code></li>
+<li><code>q2' = tail q2</code></li>
+<li><code>q3' = tail q3</code></li>
+</ol>
+<p><code>tail</code> で遅延計算を生成しない場合、<code>q1'</code>、<code>q2'</code>、<code>q3'</code> を求める時点で、それぞれ <span class="math inline">\(n\)</span> ステップの遅延計算（<code>tail</code>）を生成して即座に進行させる必要がある。 生成した負債を返済する機会がないため、償却コストの上限を壊してしまう。</p>
 </body>
 </html>
