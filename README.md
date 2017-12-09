@@ -20,20 +20,20 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 
 ### 3.1 Leftist Heaps
 
-- [Exercise 3.1](https://github.com/rst76/pfds/blob/master/ch03/ex.3.1.txt)
+- [Exercise 3.1](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch03/ex.3.1.html)
 - [Exercise 3.2](https://github.com/rst76/pfds/blob/master/ch03/ex.3.2.hs)
 - [Exercise 3.3](https://github.com/rst76/pfds/blob/master/ch03/ex.3.3.hs)
 - Exercise 3.4 [(a)](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch03/ex.3.4a.html) [(b)](https://github.com/rst76/pfds/blob/master/ch03/ex.3.4b.hs) [(c)](https://github.com/rst76/pfds/blob/master/ch03/ex.3.4c.hs) [(d)](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch03/ex.3.4d.html)
 
 ### 3.2 Binomial Heaps
 
-- [Exercise 3.5](https://github.com/rst76/pfds/blob/master/ch03/ex.3.5.txt)
+- [Exercise 3.5](https://github.com/rst76/pfds/blob/master/ch03/ex.3.5.hs)
 - [Exercise 3.6](https://github.com/rst76/pfds/blob/master/ch03/ex.3.6.hs)
 - [Exercise 3.7](https://github.com/rst76/pfds/blob/master/ch03/ex.3.7.hs)
 
 ### 3.3 Red-Black Trees
 
-- [Exercise 3.8](https://github.com/rst76/pfds/blob/master/ch03/ex.3.8.hs)
+- [Exercise 3.8](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch03/ex.3.8.html)
 - [Exercise 3.9](https://github.com/rst76/pfds/blob/master/ch03/ex.3.9.hs)
 - Exercise 3.10 [(a)](https://github.com/rst76/pfds/blob/master/ch03/ex.3.10a.hs) [(b)](https://github.com/rst76/pfds/blob/master/ch03/ex.3.10b.hs)
 
