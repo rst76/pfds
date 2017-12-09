@@ -35,7 +35,7 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 
 - [Exercise 3.8](https://github.com/rst76/pfds/blob/master/ch03/ex.3.8.hs)
 - [Exercise 3.9](https://github.com/rst76/pfds/blob/master/ch03/ex.3.9.hs)
-- Exercise 3.10 [(a)](https://github.com/rst76/pfds/blob/master/ch03/ex.3.10.hs) (b)
+- Exercise 3.10 [(a)](https://github.com/rst76/pfds/blob/master/ch03/ex.3.10a.hs) [(b)](https://github.com/rst76/pfds/blob/master/ch03/ex.3.10b.hs)
 
 ## 4 Lazy Evaluation
 
