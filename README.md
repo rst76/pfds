@@ -126,3 +126,8 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 ### 8.3 Lazy Rebuilding
 
 ### 8.4 Double-Ended Queues
+
+- [Exercise 8.4](https://github.com/rst76/pfds/blob/master/ch08/ex.8.4.hs)
+- Exercise 8.5
+- Exercise 8.6
+- Exercise 8.7
