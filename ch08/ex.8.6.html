@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+</head>
+<body>
+<h1 id="exercise-8.6">Exercise 8.6</h1>
+<h2 id="c-4-とした方が速い操作列"><span class="math inline">\(c = 4\)</span> とした方が速い操作列</h2>
+<p>それぞれ <span class="math inline">\(c = 2\)</span>、<span class="math inline">\(c = 4\)</span> で、ともに <span class="math inline">\(|f| = |r| = 1\)</span> であるような二つのキューを考える。 以下のように cons と snoc を繰り返すことで、<span class="math inline">\(c = 2\)</span> のみで回転が起こり、<span class="math inline">\(c = 4\)</span> の方が速くなる。</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">操作</th>
+<th align="center"><span class="math inline">\((\|f\|, \|r\|)\)</span>（<span class="math inline">\(c = 2\)</span>）</th>
+<th align="center"><span class="math inline">\((\|f\|, \|r\|)\)</span>（<span class="math inline">\(c = 4\)</span>）</th>
+<th align="center">回転（<span class="math inline">\(c = 2\)</span>）</th>
+<th align="center">回転（<span class="math inline">\(c = 4\)</span>）</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">snoc × <span class="math inline">\(3\)</span></td>
+<td align="center"><span class="math inline">\((3, 2)\)</span></td>
+<td align="center"><span class="math inline">\((1, 4)\)</span></td>
+<td align="center">あり</td>
+<td align="center"><strong>なし</strong></td>
+</tr>
+<tr class="even">
+<td align="center">cons × <span class="math inline">\(3\)</span></td>
+<td align="center"><span class="math inline">\((4, 4)\)</span></td>
+<td align="center"><span class="math inline">\((4, 4)\)</span></td>
+<td align="center">あり</td>
+<td align="center"><strong>なし</strong></td>
+</tr>
+<tr class="odd">
+<td align="center">snoc × <span class="math inline">\(6\)</span></td>
+<td align="center"><span class="math inline">\((7, 7)\)</span></td>
+<td align="center"><span class="math inline">\((4, 10)\)</span></td>
+<td align="center">あり</td>
+<td align="center"><strong>なし</strong></td>
+</tr>
+<tr class="even">
+<td align="center">cons × <span class="math inline">\(9\)</span></td>
+<td align="center"><span class="math inline">\((11, 12)\)</span></td>
+<td align="center"><span class="math inline">\((13, 10)\)</span></td>
+<td align="center">あり</td>
+<td align="center"><strong>なし</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="c-2-とした方が速い操作列"><span class="math inline">\(c = 2\)</span> とした方が速い操作列</h2>
+<p>それぞれ <span class="math inline">\(c = 2\)</span>、<span class="math inline">\(c = 4\)</span> で、ともに <span class="math inline">\(|f| = |r| = 1000\)</span> であるような二つのキューを考える。 以下のように tail と init を繰り返すことで、<span class="math inline">\(c = 4\)</span> のみで回転が起こり、<span class="math inline">\(c = 2\)</span> の方が速くなる。</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">操作</th>
+<th align="center"><span class="math inline">\((\|f\|, \|r\|)\)</span>（<span class="math inline">\(c = 2\)</span>）</th>
+<th align="center"><span class="math inline">\((\|f\|, \|r\|)\)</span>（<span class="math inline">\(c = 4\)</span>）</th>
+<th align="center">回転（<span class="math inline">\(c = 2\)</span>）</th>
+<th align="center">回転（<span class="math inline">\(c = 4\)</span>）</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">tail × <span class="math inline">\(751\)</span></td>
+<td align="center"><span class="math inline">\((500, 749)\)</span></td>
+<td align="center"><span class="math inline">\((625, 624)\)</span></td>
+<td align="center">あり</td>
+<td align="center">あり</td>
+</tr>
+<tr class="even">
+<td align="center">init × <span class="math inline">\(469\)</span></td>
+<td align="center"><span class="math inline">\((500, 280)\)</span></td>
+<td align="center"><span class="math inline">\((390, 390)\)</span></td>
+<td align="center"><strong>なし</strong></td>
+<td align="center">あり</td>
+</tr>
+<tr class="odd">
+<td align="center">tail × <span class="math inline">\(293\)</span></td>
+<td align="center"><span class="math inline">\((207, 280)\)</span></td>
+<td align="center"><span class="math inline">\((244, 243)\)</span></td>
+<td align="center"><strong>なし</strong></td>
+<td align="center">あり</td>
+</tr>
+<tr class="even">
+<td align="center">init × <span class="math inline">\(183\)</span></td>
+<td align="center"><span class="math inline">\((207, 97)\)</span></td>
+<td align="center"><span class="math inline">\((152, 152)\)</span></td>
+<td align="center"><strong>なし</strong></td>
+<td align="center">あり</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
