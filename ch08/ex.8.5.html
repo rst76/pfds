@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+</head>
+<body>
+<h1 id="exercise-8.5">Exercise 8.5</h1>
+<p>cons と snoc がたかだか <span class="math inline">\(1\)</span>、tail と init がたかだか <span class="math inline">\(c + 1\)</span> の負債を返済すれば、 不変条件 <span class="math inline">\(D(i) \leq min(ci + i, cs + 1 - r)\)</span> が各操作で維持されることを示す。</p>
+<h2 id="回転が起こらない場合">1. 回転が起こらない場合</h2>
+<h3 id="a-cons">(a) cons</h3>
+<p><span class="math inline">\(|f|\)</span> が <span class="math inline">\(1\)</span> 増加する。</p>
+<ul>
+<li><span class="math inline">\(|f| &lt; |r|\)</span> の場合、<span class="math inline">\(s = |f|\)</span>, <span class="math inline">\(t = |r|\)</span> 。<span class="math inline">\(ci + i\)</span>, <span class="math inline">\(cs + 1 - t\)</span> のいずれも増加するため、不変条件は満たされる。</li>
+<li><span class="math inline">\(|f| \geq |r|\)</span> の場合、<span class="math inline">\(s = |r|\)</span>, <span class="math inline">\(t = |f|\)</span> 。<span class="math inline">\(cs + 1 -t\)</span> が <span class="math inline">\(1\)</span> 減少するが、<span class="math inline">\(1\)</span> 返済すれば不変条件を維持できる。</li>
+</ul>
+<h3 id="b-snoc">(b) snoc</h3>
+<p><span class="math inline">\(f\)</span> と <span class="math inline">\(r\)</span> を入れ替えれば、cons の場合と同様に示すことができる。</p>
+<h3 id="c-tail">(c) tail</h3>
+<p><span class="math inline">\(|f|\)</span> が <span class="math inline">\(1\)</span> 減少する。</p>
+<p><span class="math inline">\(ci + i\)</span>は <span class="math inline">\(c + 1\)</span> 減少するが、<span class="math inline">\(c + 1\)</span> 返済すれば不変条件を維持できる。</p>
+<ul>
+<li><span class="math inline">\(|f| \geq |r|\)</span> の場合、<span class="math inline">\(s = |r|\)</span>, <span class="math inline">\(t = |f|\)</span> 。<span class="math inline">\(cs + 1 - t\)</span> は増加するので問題ない。</li>
+<li><span class="math inline">\(|f| &lt; |r|\)</span> の場合、<span class="math inline">\(s = |f|\)</span>, <span class="math inline">\(t = |r|\)</span> 。<span class="math inline">\(cs + 1 - t\)</span> が <span class="math inline">\(c\)</span> 減少するが、<span class="math inline">\(c + 1\)</span> 返済すれば不変条件を維持できる。</li>
+</ul>
+<h3 id="d-init">(d) init</h3>
+<p><span class="math inline">\(f\)</span> と <span class="math inline">\(r\)</span> を入れ替えれば、tail の場合と同様に示すことができる。</p>
+<h2 id="回転が起こる場合">2. 回転が起こる場合</h2>
+<h3 id="a-cons-または-init">(a) cons または init</h3>
+<p>先頭側リスト、末尾側リストの長さがそれぞれ回転前は <span class="math inline">\(cm + 2\)</span>、<span class="math inline">\(m\)</span>、回転後は <span class="math inline">\(|f|\)</span>、<span class="math inline">\(|r|\)</span> だったとすると、<span class="math inline">\(|r| \leq |f| + 1\)</span> が成り立つ。</p>
+<p>末尾側リストの負債は、</p>
+<p><span class="math inline">\(d(i) = 1 (i &lt; m), d(i) = |r| - m (i = m), d(i) = 0 (i &gt; m)\)</span></p>
+<p><span class="math inline">\(D(i) = i + 1 (i &lt; m), D(i) = |r| (i \geq m)\)</span> となり、</p>
+<p><span class="math inline">\(c \geq 2\)</span> ならば、<span class="math inline">\(cs + 1 - t = c|f| + 1 - |r| \geq (c - 1)(|r| - 1) \geq |r| - 1 = D(i) - 1\)</span> である。</p>
+<p>したがって先頭ノードの負債を <span class="math inline">\(1\)</span> 返済すれば、<span class="math inline">\(D(i) \leq cs + 1 - t\)</span> と <span class="math inline">\(D(i) \leq ci + i\)</span> が成り立つ。</p>
+<h3 id="b-snoc-または-tail">(b) snoc または tail</h3>
+<p><span class="math inline">\(f\)</span> と <span class="math inline">\(r\)</span> を入れ替えれば、cons または init の場合と同様に示すことができる。</p>
+</body>
+</html>
