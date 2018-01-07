@@ -130,4 +130,4 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 - [Exercise 8.4](https://github.com/rst76/pfds/blob/master/ch08/ex.8.4.hs)
 - [Exercise 8.5](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch08/ex.8.5.html)
 - [Exercise 8.6](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch08/ex.8.6.html)
-- Exercise 8.7
+- [Exercise 8.7](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch08/ex.8.7.html)

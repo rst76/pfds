@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+</head>
+<body>
+<h1 id="exercise-8.7">Exercise 8.7</h1>
+<p>回転によって、先頭側と末尾側のストリームそれぞれの長さが <span class="math inline">\(m\)</span> になったとする。</p>
+<p>削除操作を繰り返した場合、次に回転が起こるのは <span class="math inline">\(\frac{c-1}{c}m\)</span> 回後であり、<span class="math inline">\(c &gt;= 2\)</span> なので <span class="math inline">\(1\)</span> 回の削除で <span class="math inline">\(2\)</span> つ停止計算を実行すれば、 <span class="math inline">\(m\)</span> 回の停止計算を完了できる。</p>
+<p>また挿入操作を繰り返した場合、次に回転が起こるのは <span class="math inline">\((c - 1)m\)</span> 回後であり、<span class="math inline">\(c &gt;= 2\)</span> なので <span class="math inline">\(1\)</span> 回の削除で <span class="math inline">\(1\)</span> つ停止計算を実行すれば、 <span class="math inline">\(m\)</span> 回の停止計算を完了できる。</p>
+<p>厳密には先頭側ストリームと末尾側ストリームの長さにはたかだか <span class="math inline">\(1\)</span> の差があり、また除算による剰余も発生するが、場合分けにより十分性を証明できる。</p>
+</body>
+</html>
