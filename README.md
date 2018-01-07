@@ -131,3 +131,73 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 - [Exercise 8.5](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch08/ex.8.5.html)
 - [Exercise 8.6](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch08/ex.8.6.html)
 - [Exercise 8.7](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch08/ex.8.7.html)
+
+## 9 Numerical Representations
+
+### 9.1 Positional Number Systems
+
+### 9.2 Binary Numbers
+
+- [Exercise 9.1](https://github.com/rst76/pfds/blob/master/ch09/ex.9.1.hs)
+- [Exercise 9.2](https://github.com/rst76/pfds/blob/master/ch09/ex.9.1.hs)
+- [Exercise 9.3](https://github.com/rst76/pfds/blob/master/ch09/ex.9.3.hs)
+- Exercise 9.4
+- Exercise 9.5
+- Exercise 9.6
+- Exercise 9.7
+- Exercise 9.8
+- Exercise 9.9
+- Exercise 9.10
+- Exercise 9.11
+- Exercise 9.12
+- Exercise 9.13
+
+### 9.3 Skew Binary Numbers
+
+- Exercise 9.14
+- Exercise 9.15
+- Exercise 9.16
+
+### 9.4 Trinary and Quatenary Numbers
+
+- Exercise 9.17
+- Exercise 9.18
+- Exercise 9.19
+
+## 10 Data-Structual Bootstrapping
+
+### 10.1 Structual Decomposition
+
+- Exercise 10.1
+- Exercise 10.2
+- Exercise 10.3
+- Exercise 10.4
+- Exercise 10.5
+
+### 10.2 Structual Abstraction
+
+- Exercise 10.6
+- Exercise 10.7
+- Exercise 10.8
+
+### 10.3 Bootstrapping To Aggregate Types
+
+- Exercise 10.9
+- Exercise 10.10
+- Exercise 10.11
+- Exercise 10.12
+- Exercise 10.13
+- Exercise 10.14
+- Exercise 10.15
+
+## 11 Implicit Recursive Slowdown
+
+### 11.1 Queues and Deques
+
+- Exercise 11.1
+- Exercise 11.2
+
+### 11.2 Catenable Double-Ended Queues
+
+- Exercise 11.3
+- Exercise 11.4
