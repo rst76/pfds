@@ -72,7 +72,7 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 
 ### 5.6 The Bad News
 
-- Exercise 5.9
+- [Exercise 5.9](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch05/ex.5.9.html)
 
 ## 6 Amortization and Persistence via Lazy Evaluation
 

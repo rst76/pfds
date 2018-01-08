@@ -9,27 +9,33 @@
   <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
 </head>
 <body>
+<h1 id="exercise-5.9">Exercise 5.9</h1>
+<p>Following operations' actual costs exceed the amortized bounds.</p>
 <table>
 <thead>
 <tr class="header">
-<th>Operation</th>
+<th>Object (size <span class="math inline">\(n\)</span>)</th>
+<th>Operation (<span class="math inline">\(d\)</span> times parallel)</th>
 <th>Amortized cost</th>
 <th>Actual cost</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(d\)</span> times of insert into binomial heap of size <span class="math inline">\(n\)</span></td>
+<td>binomial heap</td>
+<td>insert</td>
 <td><span class="math inline">\(O(d)\)</span></td>
 <td><span class="math inline">\(O(d\log(n))\)</span></td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(d\)</span> times of insert into splay heap of size <span class="math inline">\(n\)</span></td>
+<td>splay heap</td>
+<td>insert</td>
 <td><span class="math inline">\(O(d\log(n))\)</span></td>
 <td><span class="math inline">\(O(dn)\)</span></td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(d\)</span> times of insert into pairing heap of size <span class="math inline">\(n\)</span></td>
+<td>pairing heap</td>
+<td>deleteMin</td>
 <td><span class="math inline">\(O(d\log(n))\)</span></td>
 <td><span class="math inline">\(O(dn)\)</span></td>
 </tr>

@@ -1,5 +1,9 @@
-| Operation | Amortized cost | Actual cost |
-|--------|--------|--------|
-| $d$ times of insert into binomial heap of size $n$ | $O(d)$ | $O(d\log(n))$ |
-| $d$ times of insert into splay heap of size $n$ | $O(d\log(n))$ | $O(dn)$ |
-| $d$ times of insert into pairing heap of size $n$ | $O(d\log(n))$ | $O(dn)$ |
+# Exercise 5.9
+
+Following operations' actual costs exceed the amortized bounds.
+
+| Object (size $n$) | Operation ($d$ times parallel) | Amortized cost | Actual cost |
+|--------|--------|--------|--------|
+| binomial heap| insert | $O(d)$ | $O(d\log(n))$ |
+| splay heap | insert | $O(d\log(n))$ | $O(dn)$ |
+| pairing heap | deleteMin | $O(d\log(n))$ | $O(dn)$ |
