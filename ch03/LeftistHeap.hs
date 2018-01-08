@@ -1,4 +1,4 @@
-module LeftistHeap(LeftistHeap) where
+module LeftistHeap (LeftistHeap) where
 
 import Heap
 
@@ -33,4 +33,3 @@ instance Heap LeftistHeap where
 
   deleteMin E = error "empty heap"
   deleteMin (T _ x a b) = merge a b
-  

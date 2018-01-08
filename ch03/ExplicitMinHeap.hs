@@ -1,4 +1,4 @@
-module ExplicitMinHeap(ExplicitMinHeap) where
+module ExplicitMinHeap (ExplicitMinHeap) where
 
 import qualified Heap as H
 
