@@ -141,10 +141,10 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 - [Exercise 9.1](https://github.com/rst76/pfds/blob/master/ch09/ex.9.1.hs)
 - [Exercise 9.2](https://github.com/rst76/pfds/blob/master/ch09/ex.9.1.hs)
 - [Exercise 9.3](https://github.com/rst76/pfds/blob/master/ch09/ex.9.3.hs)
-- Exercise 9.4
-- Exercise 9.5
-- Exercise 9.6
-- Exercise 9.7
+- [Exercise 9.4](https://github.com/rst76/pfds/blob/master/ch09/ex.9.4.hs)
+- [Exercise 9.5](https://github.com/rst76/pfds/blob/master/ch09/ex.9.5.hs)
+- [Exercise 9.6](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch09/ex.9.6.html)
+- [Exercise 9.7](https://github.com/rst76/pfds/blob/master/ch03/ex.3.9.hs)
 - Exercise 9.8
 - Exercise 9.9
 - Exercise 9.10
