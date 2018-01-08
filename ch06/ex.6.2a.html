@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+</head>
+<body>
+<h1 id="exercise-6.2">Exercise 6.2</h1>
+<p>snoc と tail がそれぞれ <span class="math inline">\(1\)</span>、<span class="math inline">\(3\)</span> の負債を返済することで、次の負債不変条件を満たし、<span class="math inline">\(O(1)\)</span> の償却上限が成り立つことを証明する。</p>
+<p><span class="math inline">\(D(i) \leq \min(3i, 2|f| - |r|)\)</span></p>
+<h2 id="回転の起こらない-snoc">回転の起こらない snoc</h2>
+<p>|r| を <span class="math inline">\(1\)</span> 増やし <span class="math inline">\(2|f| - |r|\)</span> が <span class="math inline">\(1\)</span> 減る。 最初のノードの負債を <span class="math inline">\(1\)</span> 減らすことで負債不変条件を維持できる。</p>
+<h2 id="回転の起こらない-tail">回転の起こらない tail</h2>
+<p>|f| を <span class="math inline">\(1\)</span> 減らし <span class="math inline">\(2|f| - |r|\)</span> が <span class="math inline">\(2\)</span> 減る。 また、すべてのノードのインデックスを <span class="math inline">\(1\)</span> 減らすので、<span class="math inline">\(3i\)</span> が <span class="math inline">\(3\)</span> 減る。 したがって <span class="math inline">\(3\)</span> の負債を返済することで負債不変条件を維持できる。</p>
+<h2 id="回転の起こる-snoc-と-tail">回転の起こる snoc と tail</h2>
+<p>回転の際に <span class="math inline">\(|f| = m, |r| = 2m + 1\)</span> だったとする。各ノードの負債は、以下のようにおける。</p>
+<p><span class="math inline">\(d(i) = 1 (i &lt; m), d(i) = 2m + 1 (i = m), d(i) = 0 (i &gt; m)\)</span>、</p>
+<p><span class="math inline">\(D(i) = i + 1 (i &lt; m), D(i) = 3m + 1 (i \geq m)\)</span></p>
+<p>これは <span class="math inline">\(i = 0, m\)</span> のノードで不変条件に違反するが、<span class="math inline">\(i = 0\)</span> の負債を返済すれば、両方のノードで不変条件を維持できる。</p>
+</body>
+</html>

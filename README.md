@@ -84,7 +84,7 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 
 ### 6.3 The Banker's Method
 
-- Exercise 6.2 (a) [(b)](https://github.com/rst76/pfds/blob/master/ch06/ex.6.2b.hs)
+- Exercise 6.2 [(a)](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch06/ex.6.2a.html) [(b)](https://github.com/rst76/pfds/blob/master/ch06/ex.6.2b.hs)
 
 ### 6.4 The Physicist's Method
 
