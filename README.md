@@ -57,7 +57,7 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 ### 5.3 Binomial Heaps
 
 - [Exercise 5.2](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch05/ex.5.2.html) [(ja)](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch05/ex.5.2_ja.html)
-- Exercise 5.3
+- [Exercise 5.3](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch05/ex.5.3.html) [(ja)](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch05/ex.5.3_ja.html)
 
 ### 5.4 Splay Heaps
 

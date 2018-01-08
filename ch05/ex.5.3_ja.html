@@ -9,9 +9,12 @@
   <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
 </head>
 <body>
-<p>各々 <span class="math inline">\(a\)</span> 個、 <span class="math inline">\(b\)</span> 個の木を持つ二つのヒープを <code>merge</code> することを考える。</p>
-<p><code>link</code> が発生しない場合、 <span class="math inline">\(a + b\)</span> ステップ必要で、 <span class="math inline">\(\Phi(d_{in1}) = a, \Phi(d_{in2}) = b, \Phi(d_{out}) = a+b\)</span> 、したがって償却コストは <span class="math inline">\(a_i = (a+b)+(a+b)-(a+b) = a+b\)</span> となる。マージ後のヒープの大きさを <span class="math inline">\(n\)</span> とおくと <span class="math inline">\(a &lt; \lfloor\log(n+1)\rfloor, b &lt; \lfloor\log(n+1)\rfloor\)</span> なので、 <span class="math inline">\(a+b &lt; 2\lfloor\log(n+1)\rfloor\)</span> が成り立ち、償却コストは <span class="math inline">\(O(\log n)\)</span> となる。</p>
-<p><span class="math inline">\(k\)</span> 回の <code>link</code> が発生する場合、 <code>merge</code> は <span class="math inline">\(a+b+k\)</span> ステップを要し、 <span class="math inline">\(\Phi(d_{in1}) = a, \Phi(d_{in2}) = b, \Phi(d_{out}) = a+b-k\)</span> なので、償却コストは <span class="math inline">\(a_i = (a+b+k)+(a+b-k)-(a+b) = a+b\)</span> で <span class="math inline">\(O(\log n)\)</span> が成り立つ。</p>
-<p><span class="math inline">\(a\)</span> 個の木を持つヒープに <code>deleteMin</code> を適用することを考える。 <code>removeMinTree</code> の呼び出しは <span class="math inline">\(a\)</span> ステップかかり、 <span class="math inline">\(a &lt; \lfloor\log(n + 1)\rfloor\)</span> なので、 <code>removeMin</code> は <span class="math inline">\(O(\log n)\)</span> であり、 <code>deleteMin</code> も <span class="math inline">\(O(\log n)\)</span> となる。</p>
+<h1 id="exercise-5.3">Exercise 5.3</h1>
+<h2 id="merge">merge</h2>
+<p>各々 <span class="math inline">\(a\)</span> 個、 <span class="math inline">\(b\)</span> 個の木を持つ二つのヒープを merge することを考える。</p>
+<p>link が発生しない場合、 <span class="math inline">\(a + b\)</span> ステップ必要で、 <span class="math inline">\(\Phi(d_{in1}) = a, \Phi(d_{in2}) = b, \Phi(d_{out}) = a+b\)</span> 、したがって償却コストは <span class="math inline">\(a_i = (a+b)+(a+b)-(a+b) = a+b\)</span> となる。マージ後のヒープの大きさを <span class="math inline">\(n\)</span> とおくと <span class="math inline">\(a &lt; \lfloor\log(n+1)\rfloor, b &lt; \lfloor\log(n+1)\rfloor\)</span> なので、 <span class="math inline">\(a+b &lt; 2\lfloor\log(n+1)\rfloor\)</span> が成り立ち、償却コストは <span class="math inline">\(O(\log n)\)</span> となる。</p>
+<p><span class="math inline">\(k\)</span> 回の link が発生する場合、 merge は <span class="math inline">\(a+b+k\)</span> ステップを要し、 <span class="math inline">\(\Phi(d_{in1}) = a, \Phi(d_{in2}) = b, \Phi(d_{out}) = a+b-k\)</span> なので、償却コストは <span class="math inline">\(a_i = (a+b+k)+(a+b-k)-(a+b) = a+b\)</span> で <span class="math inline">\(O(\log n)\)</span> が成り立つ。</p>
+<h2 id="deletemin">deleteMin</h2>
+<p><span class="math inline">\(a\)</span> 個の木を持つヒープに deleteMin を適用することを考える。 removeMinTree の呼び出し、removeMin で得られた ts1 の rev どちらもたかだか <span class="math inline">\(a\)</span> ステップかかる。<span class="math inline">\(a &lt; \lfloor\log(n + 1)\rfloor\)</span> なので、どちらも <span class="math inline">\(O(\log n)\)</span> である。 また前述の通り merge も <span class="math inline">\(O(\log n)\)</span> なので、deleteMin の償却コストは <span class="math inline">\(O(\log n)\)</span> である。</p>
 </body>
 </html>
