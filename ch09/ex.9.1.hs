@@ -26,18 +26,18 @@ cons x ts = consTree (Leaf x) ts
 dropTree :: Int -> Tree a -> BinaryList a
 dropTree 0 t = [One t]
 dropTree 1 (Leaf _) = []
-dropTree i t@(Node w t1 t2)
+dropTree i (Node w t1 t2)
   | i <= w `div` 2 = One t2 : dropTree i t1
   | otherwise = Zero : dropTree (i - w `div` 2) t2
 
 drop :: Int -> BinaryList a -> BinaryList a
 drop i ts = reverse $ dropWhile isZero $ drop' i ts []
   where
-  drop' 0 ts rs = reverse ts ++ rs
-  drop' _ [] rs = rs
-  drop' i (Zero : ts) rs = drop' i ts (Zero : rs)
-  drop' i (One t : ts) rs
-    | i >= size t = drop' (i - size t) ts (Zero : rs)
+  drop' _ [] _ = []
+  drop' 0 ts zs = reverse ts ++ zs
+  drop' i (Zero : ts) zs = drop' i ts (Zero : zs)
+  drop' i (One t : ts) zs
+    | i >= size t = drop' (i - size t) ts (Zero : zs)
     | otherwise = reverse ts ++ Zero : dropTree i t
   isZero Zero = True
   isZero _ = False
