@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+</head>
+<body>
+<h1 id="exercise-9.9">Exercise 9.9</h1>
+<p><strong>head</strong> は明らかに <span class="math inline">\(O(1)\)</span> 償却時間で動作するので、<strong>cons</strong>、<strong>tail</strong> について <span class="math inline">\(O(1)\)</span> 償却時間で動作することを示す。このとき <strong>Two</strong> は最大で 1 の負債を持ち、<strong>One</strong> や <strong>Three</strong> は負債を持たないとする。</p>
+<h2 id="cons-の場合">cons の場合</h2>
+<p><span class="math inline">\(ts\)</span> が <span class="math inline">\(k\)</span> 個の <strong>Three</strong> に続く <strong>Two</strong> で始まっているとする。 このとき <strong>cons</strong> は <strong>Three</strong> を <strong>Two</strong> に、<strong>Two</strong> を <strong>Three</strong> に変える。 各ステップに 1 ずつ負債を割り当てると、<strong>Two</strong> は 1 の、<strong>Three</strong> に 2 の負債（もともとあった負債と新しく割り当てられた負債）が残る。 <strong>Three</strong> にある負債 2 を返済すれば不変条件が保たれて、 <strong>cons</strong> は <span class="math inline">\(O(1)\)</span> 償却時間で動作する。</p>
+<h2 id="tail-の場合">tail の場合</h2>
+<p><span class="math inline">\(ts\)</span> が <span class="math inline">\(k\)</span> 個の <strong>One</strong> に続く <strong>Two</strong> で始まっているとする。 このとき <strong>tail</strong> は <strong>One</strong> を <strong>Two</strong> に、<strong>Two</strong> を <strong>One</strong> に変える。 各ステップに 1 ずつ負債を割り当てると、<strong>Two</strong> は 1 の、<strong>One</strong> に 2 の負債（もともとあった負債と新しく割り当てられた負債）が残る。 <strong>One</strong> にある負債 2 を返済すれば不変条件が保たれて、 <strong>tail</strong> は <span class="math inline">\(O(1)\)</span> 償却時間で動作する。</p>
+</body>
+</html>

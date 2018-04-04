@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+</head>
+<body>
+<h1 id="exercise-9.8">Exercise 9.8</h1>
+<h2 id="inc-の場合">inc の場合</h2>
+<p><span class="math inline">\(ds\)</span> が <span class="math inline">\(k\)</span> 個の <strong>Two</strong> に続く <strong>One</strong> で始まっているとする。 このとき <strong>inc ds</strong> は <strong>Two</strong> を <strong>One</strong> に、<strong>One</strong> を <strong>Two</strong> に変える。 各ステップに 1 ずつ負債を割り当てると、<strong>One</strong> は 1 の、<strong>Two</strong> に 2 の負債（もともとあった負債と新しく割り当てられた負債）が残る。 <strong>Two</strong> にある負債 2 を返済すれば不変条件が保たれて、 <strong>inc</strong> は <span class="math inline">\(O(1)\)</span> 償却時間で動作する。</p>
+<h2 id="dec-の場合">dec の場合</h2>
+<p><span class="math inline">\(ds\)</span> が <span class="math inline">\(k\)</span> 個の <strong>Zero</strong> に続く <strong>One</strong> で始まっているとする。 このとき <strong>dec ds</strong> は <strong>Zero</strong> を <strong>One</strong> に、<strong>One</strong> を <strong>Zero</strong> に変える。 各ステップに 1 ずつ負債を割り当てると、<strong>One</strong> は 1 の、<strong>Zero</strong> に 2 の負債（もともとあった負債と新しく割り当てられた負債）が残る。 <strong>Zero</strong> にある負債 2 を返済すれば不変条件が保たれて、 <strong>dec</strong> は <span class="math inline">\(O(1)\)</span> 償却時間で動作する。</p>
+</body>
+</html>

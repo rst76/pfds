@@ -145,12 +145,12 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 - [Exercise 9.5](https://github.com/rst76/pfds/blob/master/ch09/ex.9.5.hs)
 - [Exercise 9.6](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch09/ex.9.6.html)
 - [Exercise 9.7](https://github.com/rst76/pfds/blob/master/ch03/ex.3.9.hs)
-- Exercise 9.8
-- Exercise 9.9
-- Exercise 9.10
-- Exercise 9.11
-- Exercise 9.12
-- Exercise 9.13
+- [Exercise 9.8](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch09/ex.9.8.html)
+- [Exercise 9.9](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch09/ex.9.9.html) [(src)](https://github.com/rst76/pfds/blob/master/ch09/ex.9.9.hs)
+- [Exercise 9.10](https://github.com/rst76/pfds/blob/master/ch09/ex.9.10.hs)
+- [Exercise 9.11](https://github.com/rst76/pfds/blob/master/ch09/ex.9.11.hs)
+- [Exercise 9.12](https://github.com/rst76/pfds/blob/master/ch09/ex.9.12.hs)
+- [Exercise 9.13](https://github.com/rst76/pfds/blob/master/ch09/ex.9.13.hs)
 
 ### 9.3 Skew Binary Numbers
 

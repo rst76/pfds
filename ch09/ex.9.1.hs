@@ -17,11 +17,11 @@ link t1 t2 = Node (size t1 + size t2) t1 t2
 
 consTree :: Tree a -> BinaryList a -> BinaryList a
 consTree t [] = [One t]
-consTree t (Zero : ts) = One t : ts
-consTree t1 (One t2 : ts) = Zero : consTree (link t1 t2) ts
+consTree t (Zero : ds) = One t : ds
+consTree t1 (One t2 : ds) = Zero : consTree (link t1 t2) ds
 
 cons :: a -> BinaryList a -> BinaryList a
-cons x ts = consTree (Leaf x) ts
+cons x ds = consTree (Leaf x) ds
 
 dropTree :: Int -> Tree a -> BinaryList a
 dropTree 0 t = [One t]
@@ -31,14 +31,14 @@ dropTree i (Node w t1 t2)
   | otherwise = Zero : dropTree (i - w `div` 2) t2
 
 drop :: Int -> BinaryList a -> BinaryList a
-drop i ts = reverse $ dropWhile isZero $ drop' i ts []
+drop i ds = reverse $ dropWhile isZero $ drop' i ds []
   where
-  drop' _ [] _ = []
-  drop' 0 ts zs = reverse ts ++ zs
-  drop' i (Zero : ts) zs = drop' i ts (Zero : zs)
-  drop' i (One t : ts) zs
-    | i >= size t = drop' (i - size t) ts (Zero : zs)
-    | otherwise = reverse ts ++ Zero : dropTree i t
+  drop' 0 ds rs = reverse ds ++ rs
+  drop' _ [] rs = rs
+  drop' i (Zero : ds) rs = drop' i ds (Zero : rs)
+  drop' i (One t : ds) rs
+    | i >= size t = drop' (i - size t) ds (Zero : rs)
+    | otherwise = reverse ds ++ Zero : dropTree i t
   isZero Zero = True
   isZero _ = False
 
