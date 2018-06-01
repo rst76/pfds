@@ -154,7 +154,7 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 
 ### 9.3 Skew Binary Numbers
 
-- Exercise 9.14
+- [Exercise 9.14](https://github.com/rst76/pfds/blob/master/ch09/ex.9.14.hs)
 - Exercise 9.15
 - Exercise 9.16
 
