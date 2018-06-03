@@ -156,7 +156,7 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 
 - [Exercise 9.14](https://github.com/rst76/pfds/blob/master/ch09/ex.9.14.hs)
 - Exercise 9.15
-- Exercise 9.16
+- [Exercise 9.16](https://github.com/rst76/pfds/blob/master/ch09/ex.9.16.hs)
 
 ### 9.4 Trinary and Quatenary Numbers
 
