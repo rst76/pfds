@@ -148,7 +148,7 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 - [Exercise 9.8](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch09/ex.9.8.html)
 - [Exercise 9.9](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch09/ex.9.9.html) [(src)](https://github.com/rst76/pfds/blob/master/ch09/ex.9.9.hs)
 - [Exercise 9.10](https://github.com/rst76/pfds/blob/master/ch09/ex.9.10.hs)
-- [Exercise 9.11](https://github.com/rst76/pfds/blob/master/ch09/ex.9.11.hs)
+- [Exercise 9.11](https://github.com/rst76/pfds/blob/master/ch09/SegmentedBinomialHeap.hs)
 - [Exercise 9.12](https://github.com/rst76/pfds/blob/master/ch09/ex.9.12.hs)
 - [Exercise 9.13](https://github.com/rst76/pfds/blob/master/ch09/ex.9.13.hs)
 
