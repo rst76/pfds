@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>ex.9.15</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="exercise-9.15">Exercise 9.15</h1>
+<p>We show that for a skew binomial tree of size <span class="math inline">\(|t|\)</span> and rank <span class="math inline">\(r\)</span>, <span class="math inline">\(2^{r} \leq |t| \leq 2^{r+1}-1\)</span>.</p>
+<p>When <span class="math inline">\(r = 0\)</span>, <span class="math inline">\(|t_{0}| = 1\)</span> and it satisfies <span class="math inline">\(2^{0} \leq 1 \leq 2^{0+1}-1\)</span>.</p>
+<p>If <span class="math inline">\(2^{k} \leq |t_{k}| \leq 2^{k+1}-1\ (r=k)\)</span>,</p>
+<p><span class="math inline">\(\displaystyle \sum_{i=0}^{k}{2^{i}+1} \leq |t_{k+1}| \leq \sum_{i=0}^{k}(2^{i+1}-1)+1+(k+1)\)</span></p>
+<p><span class="math inline">\(\displaystyle 2^{k+1} \leq |t_{k+1}| \leq 2^{(k+1)+1}-1\ (r=k+1)\)</span></p>
+<p>So for any <span class="math inline">\(r\)</span>, <span class="math inline">\(2^{r} \leq |t| \leq 2^{r+1}-1\)</span>.</p>
+</body>
+</html>
