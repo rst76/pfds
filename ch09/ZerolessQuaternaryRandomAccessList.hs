@@ -1,4 +1,4 @@
-module ZerolessQuaternaryRandomAccessList where
+module ZerolessQuaternaryRandomAccessList (QuaternaryList) where
 
 import Prelude hiding (head, tail, lookup)
 import RandomAccessList
@@ -62,11 +62,11 @@ instance RandomAccessList QuaternaryList where
       | i < w = lookupTree w i t
       | otherwise = look w (i - w) (ts : ds)
 
-  update i x (QL ds) = QL (upd 1 i x ds)
+  update i y (QL ds) = QL (upd 1 i y ds)
     where
     upd _ _ _ [] = error "bad subscript"
-    upd w i x ([] : ds) = [] : upd (w * 4) i x ds 
-    upd w i x ((t : ts) : ds)
-      | i < w = (updateTree w i x t : ts) : ds
+    upd w i y ([] : ds) = [] : upd (w * 4) i y ds
+    upd w i y ((t : ts) : ds)
+      | i < w = (updateTree w i y t : ts) : ds
       | otherwise = (t : ts') : ds'
-      where (ts' : ds') = upd w (i - w) x (ts : ds)
+      where (ts' : ds') = upd w (i - w) y (ts : ds)

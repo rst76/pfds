@@ -162,7 +162,7 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 
 - [Exercise 9.17](https://github.com/rst76/pfds/blob/master/ch09/ex.9.17.hs)
 - [Exercise 9.18](https://github.com/rst76/pfds/blob/master/ch09/ex.9.18.hs)
-- Exercise 9.19
+- [Exercise 9.19](https://github.com/rst76/pfds/blob/master/ch09/ex.9.19.hs)
 
 ## 10 Data-Structual Bootstrapping
 
