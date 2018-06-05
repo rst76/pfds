@@ -1,12 +1,12 @@
+module ScheduledZerolessRedundantRandomAccessList where
+
 import Prelude hiding (head, tail, lookup)
+import RandomAccessList
 
 data Tree a = Leaf a | Node (Tree a) (Tree a)
 data Digit a = One (Tree a) | Two (Tree a) (Tree a) | Two' (Tree a) (Tree a) | Three (Tree a) (Tree a) (Tree a)
 type Schedule a = [[Digit a]]
-type RList a = ([Digit a], Schedule a)
-
-empty :: RList a
-empty = ([], [])
+data RList a = RL [Digit a] (Schedule a)
 
 exec :: Schedule a -> Schedule a
 exec [] = []
@@ -20,12 +20,6 @@ consTree t (Two t1 t2 : ds) = Three t t1 t2 : ds
 consTree t (Two' t1 t2 : ds) = Three t t1 t2 : ds
 consTree t (Three t1 t2 t3 : ds) = Two' t t1 : consTree (Node t2 t3) ds
 
-cons :: a -> RList a -> RList a
-cons x (ds, sched) = sched' `seq` (ds', sched')
-  where
-  ds' = consTree (Leaf x) ds
-  sched' = exec (exec (ds' : sched))
-
 unconsTree :: [Digit a] -> (Tree a, [Digit a])
 unconsTree [] = error "empty list"
 unconsTree [One t] = (t, [])
@@ -35,12 +29,25 @@ unconsTree (Three t t1 t2 : ds) = (t, Two t1 t2 : ds)
 unconsTree (One t : ds) =  (t, Two' t1 t2 : ds')
   where (Node t1 t2, ds') = unconsTree ds
 
-head :: RList a -> a
-head (ds, _) = x
-  where (Leaf x, _) = unconsTree ds
+instance RandomAccessList RList where
 
-tail :: RList a -> RList a
-tail (ds, sched) = sched' `seq` (ds', sched')
-  where
-  (_, ds') = unconsTree ds
-  sched' = exec (exec (ds' : sched))
+  empty = RL [] []
+
+  isEmpty (RL ds _) = null ds
+
+  cons x (RL ds sched) = sched' `seq` (RL ds' sched')
+    where
+    ds' = consTree (Leaf x) ds
+    sched' = exec (exec (ds' : sched))
+
+  head (RL ds _) = x
+    where (Leaf x, _) = unconsTree ds
+
+  tail (RL ds sched) = sched' `seq` (RL ds' sched')
+    where
+    (_, ds') = unconsTree ds
+    sched' = exec (exec (ds' : sched))
+
+  lookup i (RL ds sched) = undefined
+
+  update i y (RL ds sched) = undefined
