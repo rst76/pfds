@@ -1,4 +1,4 @@
-module SegmentedBinaryRandomAccessList where
+module SegmentedBinaryRandomAccessList (BinaryList) where
 
 import Prelude hiding (head, tail, lookup)
 import RandomAccessList
@@ -10,7 +10,7 @@ data Digit a = Zero
   | Threes [(Tree a, Tree a, Tree a)]
   | Four (Tree a) (Tree a) (Tree a) (Tree a)
   deriving Show
-newtype RList a = RL [Digit a]
+newtype BinaryList a = BL [Digit a]
 
 size :: Tree a -> Int
 size (Leaf _) = 1
@@ -78,20 +78,20 @@ look i (Four t t1 t2 t3 : ds)
   | i < size t = lookupTree i t
   | otherwise = look (i - size t) (threes [(t1, t2, t3)] ds)
 
-instance RandomAccessList RList where
+instance RandomAccessList BinaryList where
 
-  empty = RL []
+  empty = BL []
 
-  isEmpty (RL ds) = null ds
+  isEmpty (BL ds) = null ds
 
-  cons x (RL ds) = RL (fixup (consTree (Leaf x) ds))
+  cons x (BL ds) = BL (fixup (consTree (Leaf x) ds))
 
-  head (RL ds) = x
+  head (BL ds) = x
     where (Leaf x, _) = unconsTree ds
   
-  tail (RL ds) = RL (fixdown ds')
+  tail (BL ds) = BL (fixdown ds')
     where (_, ds') = unconsTree ds
   
-  lookup i (RL ds) = look i ds
+  lookup i (BL ds) = look i ds
 
-  update i y (RL ds) = undefined
+  update i y (BL ds) = undefined

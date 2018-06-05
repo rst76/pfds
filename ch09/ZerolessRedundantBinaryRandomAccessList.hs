@@ -1,11 +1,11 @@
-module ZerolessRedundantBinaryRandomAccessList where
+module ZerolessRedundantBinaryRandomAccessList (BinaryList) where
 
 import Prelude hiding (head, tail, lookup)
 import RandomAccessList
 
 data Tree a = Leaf a | Node (Tree a) (Tree a)
 data Digit a = One (Tree a) | Two (Tree a) (Tree a) | Three (Tree a) (Tree a) (Tree a)
-newtype RList a = RL [Digit a]
+newtype BinaryList a = BL [Digit a]
 
 consTree :: Tree a -> [Digit a] -> [Digit a]
 consTree t [] = [One t]
@@ -21,20 +21,20 @@ unconsTree (Three t t1 t2 : ds) = (t, Two t1 t2 : ds)
 unconsTree (One t : ds) =  (t, Two t1 t2 : ds')
   where (Node t1 t2, ds') = unconsTree ds
 
-instance RandomAccessList RList where
+instance RandomAccessList BinaryList where
 
-  empty = RL []
+  empty = BL []
 
-  isEmpty (RL ds) = null ds
+  isEmpty (BL ds) = null ds
   
-  cons x (RL ds) = RL (consTree (Leaf x) ds)
+  cons x (BL ds) = BL (consTree (Leaf x) ds)
 
-  head (RL ds) = x
+  head (BL ds) = x
     where (Leaf x, _) = unconsTree ds
 
-  tail (RL ds) = RL ds'
+  tail (BL ds) = BL ds'
     where (_, ds') = unconsTree ds
 
-  lookup i (RL ds) = undefined
+  lookup i (BL ds) = undefined
 
-  update i y (RL ds) = undefined
+  update i y (BL ds) = undefined

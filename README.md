@@ -154,15 +154,15 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 
 ### 9.3 Skew Binary Numbers
 
-- [Exercise 9.14](https://github.com/rst76/pfds/blob/master/ch09/ex.9.14.hs)
+- [Exercise 9.14](https://github.com/rst76/pfds/blob/master/ch09/HoodMelvilleQueue.hs) [(demo)](https://github.com/rst76/pfds/blob/master/ch09/ex.9.14.hs)
 - [Exercise 9.15](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch09/ex.9.15.html)
-- [Exercise 9.16](https://github.com/rst76/pfds/blob/master/ch09/ex.9.16.hs)
+- [Exercise 9.16](https://github.com/rst76/pfds/blob/master/ch09/DeletableHeap.hs) [(demo)](https://github.com/rst76/pfds/blob/master/ch09/ex.9.16.hs)
 
 ### 9.4 Trinary and Quatenary Numbers
 
-- [Exercise 9.17](https://github.com/rst76/pfds/blob/master/ch09/ex.9.17.hs)
-- [Exercise 9.18](https://github.com/rst76/pfds/blob/master/ch09/ex.9.18.hs)
-- [Exercise 9.19](https://github.com/rst76/pfds/blob/master/ch09/ex.9.19.hs)
+- [Exercise 9.17](https://github.com/rst76/pfds/blob/master/ch09/TrinomialHeap.hs) [(demo)](https://github.com/rst76/pfds/blob/master/ch09/ex.9.17.hs)
+- [Exercise 9.18](https://github.com/rst76/pfds/blob/master/ch09/ZerolessQuaternaryRandomAccessList.hs) [(demo)](https://github.com/rst76/pfds/blob/master/ch09/ex.9.18.hs)
+- [Exercise 9.19](https://github.com/rst76/pfds/blob/master/ch09/SkewTrinaryRandomAccessList.hs) [(demo)](https://github.com/rst76/pfds/blob/master/ch09/ex.9.19.hs)
 
 ## 10 Data-Structual Bootstrapping
 
