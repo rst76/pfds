@@ -150,7 +150,7 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 - [Exercise 9.10](https://github.com/rst76/pfds/blob/master/ch09/ex.9.10.hs)
 - [Exercise 9.11](https://github.com/rst76/pfds/blob/master/ch09/SegmentedBinomialHeap.hs)
 - [Exercise 9.12](https://github.com/rst76/pfds/blob/master/ch09/ex.9.12.hs)
-- [Exercise 9.13](https://github.com/rst76/pfds/blob/master/ch09/ex.9.13.hs)
+- [Exercise 9.13](https://github.com/rst76/pfds/blob/master/ch09/SegmentedBinaryRandomAccessList.hs)
 
 ### 9.3 Skew Binary Numbers
 
