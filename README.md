@@ -168,8 +168,8 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 
 ### 10.1 Structual Decomposition
 
-- Exercise 10.1
-- Exercise 10.2
+- [Exercise 10.1](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch10/ex.10.1.html)
+- [Exercise 10.2](https://github.com/rst76/pfds/blob/master/ch10/AltZerolessRedundantBinaryRandomAccessList.js)
 - Exercise 10.3
 - Exercise 10.4
 - Exercise 10.5
