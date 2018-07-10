@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>ex.10.5</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="exercise-10.5-b">Exercise 10.5 (b)</h1>
+<p>The costs of <code>empty</code>, <code>isEmpty</code>, <code>head</code> are all obviously <span class="math inline">\(O(1)\)</span>. <code>snoc</code> and <code>tail</code> call <code>checkQ</code>, and <code>checkQ</code> calls <code>PrimQ.snoc</code> and <code>checkF</code>. As forcing <code>$rev</code> in <code>checkF</code> takes <span class="math inline">\(O(1)\)</span> amortized time and <code>PrimQ.head</code> and <code>PrimQ.tail</code> take <span class="math inline">\(O(1)\)</span> worst-case time, <code>checkF</code> takes <span class="math inline">\(O(1)\)</span> amortized time in total. <code>PrimQ.snoc</code> also costs <span class="math inline">\(O(1)\)</span>, <code>checkQ</code> and therefore <code>snoc</code> and <code>tail</code> take <span class="math inline">\(O(1)\)</span> amortized time.</p>
+</body>
+</html>

@@ -172,7 +172,7 @@ Solutions for "Purely Functional Data Structures" by Chris Okasaki.
 - [Exercise 10.2](https://github.com/rst76/pfds/blob/master/ch10/AltZerolessRedundantBinaryRandomAccessList.hs)
 - [Exercise 10.3](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch10/ex.10.3.html)
 - [Exercise 10.4](https://github.com/rst76/pfds/blob/master/ch10/AltBootstrappedQueue1.hs)
-- Exercise 10.5
+- Exercise 10.5 [(a)](https://github.com/rst76/pfds/blob/master/ch10/AltBootstrappedQueue2.hs) [(b)](https://htmlpreview.github.io/?https://github.com/rst76/pfds/blob/master/ch10/ex.10.5.html)
 
 ### 10.2 Structual Abstraction
 
